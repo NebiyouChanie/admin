@@ -1,13 +1,13 @@
+import { MapPin, Phone } from "lucide-react";
 import * as motion from "motion/react-client";
-import Link from 'next/link'
-import { MapPin, Phone, Mail } from "lucide-react"
-import Image from "next/image"
+import Link from 'next/link';
+import LocationCarousel from "./LocationCarousel";
 
 function LocationSection() {
   return (
     <section id="location" className="py-16 md:py-24 lg:py-48">
       <div className="container px-4 md:px-10 xl:px-32 2xl:px-40 mx-auto">
-        <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center ">
           
           {/* Text Section with Motion */}
           <motion.div
@@ -30,11 +30,7 @@ function LocationSection() {
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="text-gray-500 shrink-0" size={18} />
-                <p className="text-gray-500 font-light text-[18px] ">+1 (555) 123-4567</p>
-              </div>
-              <div className="flex items-center gap-3">
-                <Mail className="text-gray-500 shrink-0" size={18} />
-                <p className="text-gray-500 font-light text-[18px]">info@sapore.com</p>
+                <p className="text-gray-500 font-light text-[18px] ">+251 91 143 9712</p>
               </div>
             </div>
             <div className="flex">
@@ -50,18 +46,16 @@ function LocationSection() {
 
           {/* Image Section with Motion */}
           <motion.div
-            whileInView={{ opacity: 1, x: 0 }}  // Image comes from the right to the left
-            initial={{ opacity: 0, x: 100 }}  // Image starts from the right
+            whileInView={{ opacity: 1, x: 0 }}   
+            initial={{ opacity: 0, x: 100 }}  
             transition={{ duration: 1, ease: "easeInOut" }}
             viewport={{ once: true }}
-            className="relative h-[320px] md:h-[500px] overflow-hidden"
+            className=""
           >
-            <Image
-              src="/location.jpg"
-              alt="Restaurant location map"
-              fill
-              className="object-cover"
-            />
+            <div className="w-full">
+
+            <LocationCarousel />
+            </div>
           </motion.div>
         </div>
       </div>

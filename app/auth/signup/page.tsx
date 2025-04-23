@@ -1,6 +1,5 @@
- 'use client'
+'use client'
 
-import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import {
   Card,
@@ -9,19 +8,18 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import Link from "next/link"
-import { useForm } from "react-hook-form";
+import { signup } from '@/lib/actions/auth'
 import { SignupFormSchema, SignupFormValues } from '@/lib/definitions'
-import { signup } from '@/app/actions/auth'
-import { toast } from "sonner"
+import { zodResolver } from "@hookform/resolvers/zod"
+import Link from "next/link"
 import { useRouter } from "next/navigation"
-export function SignupForm({
-  className,
-  ...props
-}: React.ComponentPropsWithoutRef<"div">) {
+import { useForm } from "react-hook-form"
+import { toast } from "sonner"
+
+
+export default function SignupForm() {
 
   const form = useForm<SignupFormValues>({
     resolver: zodResolver(SignupFormSchema),
@@ -42,23 +40,24 @@ export function SignupForm({
         Object.entries(result.errors).forEach(([field, messages]) => {
           form.setError(field as keyof SignupFormValues, {
             type: 'manual',
-            message: messages.join(', '),
+            message: messages.join(", "),
           });
         });
         return;
       }
       
-      router.push('/admin')
+      router.push('/auth/signin')
       // Success toast
       toast.success(result.message || 'Signup successful!');
   
     } catch (error) { 
+      console.log("~ onSubmit ~ error:", error)
       toast.error('Something went wrong! Please try again later.');
     }
   };
 
   return (
-    <div className={cn("flex flex-col gap-6", className)} {...props}>
+    <div className="flex flex-col gap-6 w-full max-w-sm" >
       <Card>
         <CardHeader className="text-center">
           <CardTitle className="text-2xl">Create an Account</CardTitle>
@@ -115,7 +114,7 @@ export function SignupForm({
           </Form>
           <div className="mt-4 text-center text-sm">
             
-            <Link href="/admin/dashboard" className="cursor-pointer underline underline-offset-4">
+            <Link href="/admin" className="cursor-pointer underline underline-offset-4">
               Go Back To Dashboard
             </Link>
           </div>

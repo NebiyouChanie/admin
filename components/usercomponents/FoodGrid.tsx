@@ -9,14 +9,14 @@ interface GridGalleryProps {
 export default function GridGallery({ className }: GridGalleryProps) {
   // Direct import of images - adjust these paths to match your project structure
   const images = [
-    { src: "/location.jpg", alt: "Gallery image 1" },
-    { src: "/location.jpg", alt: "Gallery image 2" },
-    { src: "/location.jpg", alt: "Gallery image 3" },
-    { src: "/location.jpg", alt: "Gallery image 4" },
-    { src: "/location.jpg", alt: "Gallery image 5" },
-    { src: "/location.jpg", alt: "Gallery image 6" },
-    { src: "/location.jpg", alt: "Gallery image 7" },
-    { src: "/location.jpg", alt: "Gallery image 8" },
+    { src: "/gallarey1.jpg", alt: "Gallery image 1" },
+    { src: "/gallarey2.jpg", alt: "Gallery image 2" },
+    { src: "/gallarey3.jpg", alt: "Gallery image 3" },
+    { src: "/gallarey4.jpg", alt: "Gallery image 4" },
+    { src: "/gallarey5.jpg", alt: "Gallery image 5" },
+    { src: "/gallarey6.jpg", alt: "Gallery image 6" },
+    { src: "/gallarey7.jpg", alt: "Gallery image 7" },
+    { src: "/gallarey8.jpg", alt: "Gallery image 8" },
   ];
 
   // For demonstration, we'll use placeholder images if the actual images aren't available

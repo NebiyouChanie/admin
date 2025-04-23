@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function MenuSection() {
   return (
-    <section id="menu" className="py-16 md:py-24">
+    <section id="menu" className="py-16 md:py-24 xl:pb-32">
       <div className="container px-4 md:px-10 xl:px-32 2xl:px-40 mx-auto">
         <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
           {/* Image Section with Motion */}
@@ -33,15 +33,13 @@ function MenuSection() {
           >
             <h2 className="font-playfair text-4xl md:text-5xl font-medium mb-6">Our Menu</h2>
             <p className="text-gray-500 font-light text-[18px] mb-4">
-              Our menu features 10 distinct lasagna recipes, each crafted with authentic Italian ingredients and
-              traditional techniques. From the rich and hearty Bolognese to our vegetarian options, there's
-              something for everyone.
-            </p>
-            <p className="text-gray-500 font-light text-[18px] mb-4">
-              Beyond our signature lasagnas, we also offer a selection of appetizers, salads, and desserts to
-              complete your dining experience. All our dishes are made fresh daily using locally sourced ingredients
-              whenever possible.
-            </p>
+  We blend Italian tradition with bold flavors and fresh ingredients, offering a menu that celebrates authenticity. From <strong>crispy pizzas</strong> like <strong>Quattro Formaggi</strong> and <strong>Pepperoni</strong> to rich, comforting <strong>pastas</strong> such as <strong>Chicken Alfredo</strong>, <strong>Ragu</strong>, and <strong>Pesto Pasta with Fish</strong>, every dish is crafted with care. Our <strong>lasagnas</strong> are a specialty, with options like the indulgent <strong>Sapore Lasagna</strong>, the fresh <strong>Lasagna Verde</strong>, and the hearty <strong>Beef Lasagna</strong>, each layered to perfection.
+</p>
+
+<p className="text-gray-500 font-light text-[18px] mb-4">
+  Beyond Italian classics, the menu features <strong>juicy burgers, crispy sandwiches, and fresh salads</strong>, perfect for any craving. Those looking for Ethiopian flavors will love the <strong>Chigina Tibs, Tibs Firfir, and Shiro</strong>, served with injera for a comforting, home-style touch. For a complete meal, pair your dish with a <strong>grilled steak, fish, or chicken combo</strong> and enjoy flavors made to be shared.
+</p>
+
             <Link href="/menu">
               <button
                 className="bg-white font-medium hover:bg-black hover:text-white text-black py-2 px-6 text-sm transition-all ease-in-out duration-300 border border-black w-fit mt-6"

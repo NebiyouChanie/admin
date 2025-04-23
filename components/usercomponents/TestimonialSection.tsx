@@ -36,19 +36,21 @@ function TestimonialSection() {
             <div className="mr-4">
               <div className="relative w-12 h-12 rounded-full overflow-hidden">
                 <Image
-                  src="/sapore-logo.svg"
+                  src="/testimonial1.png"
                   alt="Customer 1"
                   fill
                   className="object-cover"
                 />
               </div>
             </div>
+            
             <div className="text-start">
+              <Link href='https://g.co/kgs/Wk8Krny'>
               <p className="italic mb-4">
-                "The best lasagna I've ever had! The flavors were incredible and the service was outstanding. Will
-                definitely be coming back again."
-              </p>
-              <p className="font-medium">- Happy Customer 1</p>
+              &quot;Saphore Addis is an exceptional restaurant with a relaxed and inviting atmosphere. The food is simply amazing, and I highly recommend trying their lasagna, which tastes like a homemade delight. The flavors are perfectly balanced, and each bite is a delightful experience.&apos;               </p>
+              <p className="font-medium">
+              - Bethlehem Abera</p>
+              </Link>
             </div>
           </motion.div>
 
@@ -63,7 +65,7 @@ function TestimonialSection() {
             <div className="mr-4">
               <div className="relative w-12 h-12 rounded-full overflow-hidden">
                 <Image
-                  src="/sapore-logo.svg"
+                  src="/testimonial2.png"
                   alt="Customer 2"
                   fill
                   className="object-cover"
@@ -71,10 +73,12 @@ function TestimonialSection() {
               </div>
             </div>
             <div className="text-start">
+              <Link href='https://g.co/kgs/jPna7Yw'>
               <p className="italic mb-4">
-                "A delightful experience! The lasagna was superb, and the ambiance made it a perfect evening. Highly recommend!"
-              </p>
-              <p className="font-medium">- Happy Customer 2</p>
+              &quot;Loved this place so much. The mamamia burger and lasagna is to die for🤤and the service was amazing.&apos;
+               </p>
+              <p className="font-medium">- Seli</p>
+              </Link>
             </div>
           </motion.div>
 
@@ -89,7 +93,7 @@ function TestimonialSection() {
             <div className="mr-4">
               <div className="relative w-12 h-12 rounded-full overflow-hidden">
                 <Image
-                  src="/sapore-logo.svg"
+                  src="/testimonial3.png"
                   alt="Customer 3"
                   fill
                   className="object-cover"
@@ -97,17 +101,21 @@ function TestimonialSection() {
               </div>
             </div>
             <div className="text-start">
+              <Link href='https://g.co/kgs/CKxJhDT'>
               <p className="italic mb-4">
-                "An unforgettable meal. The flavors were rich and full of depth. A must-visit for anyone who loves great Italian food!"
+              &apos;I visited this restaurant at times, and the food is always delicious. The atmosphere is welcoming, and the staff is incredibly kind and friendly. The only downside is that the food can take a bit longer to arrive than expected, but it&apos;s definitely worth the wait. Highly recommend!&apos;
+               </p>
+              <p className="font-medium">
+              - Elshaday Tsega
               </p>
-              <p className="font-medium">- Happy Customer 3</p>
+              </Link>
             </div>
           </motion.div>
         </div>
 
          
           <Link
-            href="#booking"
+            href="https://www.google.com/search?sca_esv=dbb5466b0453cba2&sxsrf=AHTn8zqqlSPM7jJXzL9ANRVQkT-CuEdnSQ:1743403860199&si=APYL9bs7Hg2KMLB-4tSoTdxuOx8BdRvHbByC_AuVpNyh0x2KzV8Hia0_ZXP3CfIh37VJoIrtJ76UMXf-Lp74dXpgwc1hxhEeNgOfaA7CtOhtavs2VuPLhwHRaMOf-Qy6lywP3yGPfPGZCHoZe4Cd92Eb_0W5W-JViQ%3D%3D&q=Sapore+Restaurant+Reviews&sa=X&ved=2ahUKEwjW86W-3bOMAxXxWkEAHc0KMYAQ0bkNegQIJhAD&biw=1920&bih=957&dpr=1#lrd=0x164b857383d8db3b:0x71c62f42ce8ff2db,3,,,,"
             className="bg-white font-medium hover:bg-transparent hover:text-white hover:border-white border border-transparent text-black px-6 py-2 transition-colors relative z-20"
           >
             Rate Us
@@ -118,4 +126,4 @@ function TestimonialSection() {
   )
 }
 
-export default TestimonialSection
+export default TestimonialSection;

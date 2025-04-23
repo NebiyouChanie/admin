@@ -31,8 +31,8 @@ function BookingSection() {
                 <div className="space-y-2">
                   <div className="flex items-center gap-3">
                     <div>
-                      <p className="text-gray-500">Monday - Friday: 11:30 AM - 10:00 PM</p>
-                      <p className="text-gray-500">Saturday - Sunday: 10:00 AM - 11:00 PM</p>
+                      <p className="text-gray-500">Monday - Saturday: 7:30 AM - 10:00 PM</p>
+                      <p className="text-gray-500">Sunday: 11:00 AM - 10:00 PM</p>
                     </div>
                   </div>
                 </div>
@@ -45,12 +45,9 @@ function BookingSection() {
               </div>
               <div>
                 <h3 className="font-playfair text-xl font-medium mb-4">Book directly</h3>
-                <p className="text-gray-500 mb-4">
-                  For parties larger than 8 or special events, please call us directly.
-                </p>
                 <div className="flex items-center gap-3">
                   <Phone className="shrink-0" size={18} />
-                  <p className="font-medium">+251 911439712 / +251 988438888</p>
+                  <p className="text-gray-500">+251 911439712 / +251 988438888</p>
                 </div>
               </div>
             </div>

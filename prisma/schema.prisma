@@ -27,7 +27,7 @@ model MenuItem {
   name        String
   description String
   price       Float
-  isInStock   Boolean    @default(true)
+  isMainMenu   Boolean    @default(false)
   imageUrl    String
   isSpecial   Boolean    @default(false)
   itemType    ItemType
@@ -41,11 +41,18 @@ enum ItemType {
   dessert
 }
 
+model MenuSettings {
+  id            String @id @default(uuid())
+  showPrice     Boolean @default(true)
+  showDescription Boolean @default(true)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
 
 model Reservation {
   id             String   @id @default(uuid())
-  firstName      String
-  lastName       String?
+  name      String
+  email       String
   phoneNumber    String
   numberOfGuests Int
   date           DateTime

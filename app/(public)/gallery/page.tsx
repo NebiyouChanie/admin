@@ -1,40 +1,52 @@
-import GridGallery from "@/components/usercomponents/FoodGrid"
-import Header from "@/components/usercomponents/Header"
-import Image from "next/image"
-import Link from "next/link"
+import * as motion from "motion/react-client";
+ 
+
+import GridGallery from "@/components/usercomponents/FoodGrid";
+import Header from "@/components/usercomponents/Header";
+
 
 export default function AboutUsPage() {
   return (
     <div className="flex flex-col min-h-screen">
-      
       <Header />
 
-      <main className="flex-1  ">
-        {/* About Us Hero Section */}
-        <section className="pt-36 md:pt-36 xl:pt-48">
+      <main className="flex-1">
+        {/* Gallery Hero Section */}
+        <motion.section 
+          className="pt-36 md:pt-36 xl:pt-48"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+        >
           <div className="container px-4 md:px-10 xl:px-32 2xl:px-40 mx-auto">
-            
-              <div className="mb-16">
-                <div className="flex flex-col xl:flex-row xl:gap-8 xl:items-center">
-                  <h1 className="font-playfair text-4xl md:text-6xl xl:text-[90px] mb-6 xl:mb-0">About Us</h1>
-                  <p className="text-gray-500 font-light text-[18px] lg:max-w-[600px] ">
-                    Discover the rich flavors of Italy right here in Addis Ababa. From our signature 10 unique lasagnas
-                    to mouthwatering lasagna burgers, pasta macaroni, and more, every bite is a taste of tradition with
-                    a modern twist.
-                  </p>
-                </div>
+            <motion.div 
+              className="mb-16"
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+            >
+              <div className="flex flex-col xl:flex-row xl:gap-8 xl:items-center">
+                <motion.h1 
+                  className="font-playfair text-4xl md:text-6xl xl:text-[90px] mb-6 xl:mb-0"
+                  
+                >
+                  Gallery
+                </motion.h1>
+                 
               </div>
+            </motion.div>
 
-              <div className="relative w-full overflow-hidden">
-                  <GridGallery />
-                  <GridGallery />
-                  <GridGallery />
-                  <GridGallery />
-              </div>
+            <div 
+              className="relative w-full overflow-hidden"
+            >
+              <GridGallery />
+              <GridGallery />
+              <GridGallery />
+              <GridGallery />
             </div>
-        </section>
-       </main>
+          </div>
+        </motion.section>
+      </main>
     </div>
-  )
+  );
 }
-

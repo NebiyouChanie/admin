@@ -1,5 +1,5 @@
+import { Instagram } from "lucide-react"
 import Image from "next/image"
-import { Instagram, Facebook, Twitter } from "lucide-react"
 import Link from "next/link"
 
 
@@ -14,8 +14,8 @@ function Footer() {
                   <Image
                     src="/sapore-logo.svg"
                     alt="Sapore Logo"
-                    width={40}
-                    height={40}
+                    width={80}
+                    height={80}
                     className="rounded-full"
                   />
                 </div>
@@ -24,9 +24,9 @@ function Footer() {
             </div>
             <div>
               <h4 className=" text-lg font-medium mb-4" style={{ fontFamily: "var(--font-playfair-display)" }}>Address</h4>
-              <p className="text-sm text-gray-400 mb-1">123 Pasta Street</p>
-              <p className="text-sm text-gray-400 mb-4">Italian Quarter, City, 12345</p>
-              <p className="text-sm text-gray-400 mb-1">+251 911439712</p>
+              <p className="text-sm text-gray-400 mb-1"> Zimbabwe St</p>
+              <p className="text-sm text-gray-400 mb-4">Bole, Addis Ababa</p>
+              <p className="text-sm text-gray-400 mb-1">+251 91 143 9712</p>
               <p className="text-sm text-gray-400">+251 988438888</p>
             </div>
             <div>
@@ -67,14 +67,8 @@ function Footer() {
             <div>
               <h4 className="font-playfair text-lg font-medium mb-4">Social media</h4>
               <div className="flex gap-4 justify-center">
-                <Link href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="https://www.instagram.com/sapore.restaurant?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" className="text-gray-400 hover:text-white transition-colors">
                   <Instagram size={20} />
-                </Link>
-                <Link href="#" className="text-gray-400 hover:text-white transition-colors">
-                  <Facebook size={20} />
-                </Link>
-                <Link href="#" className="text-gray-400 hover:text-white transition-colors">
-                  <Twitter size={20} />
                 </Link>
               </div>
             </div>
